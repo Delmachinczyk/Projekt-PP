@@ -12,7 +12,7 @@ Node* utworzListe();
 
 void dodajPostac(Node** head, Postac nowaPostac);
 
-// void usunPostac(Node** head, const char* pseudonim);
+void usunPostac(Node** head, const char* pseudonim);
 
 void wyswietl(Node* head);
 

@@ -26,6 +26,35 @@ void dodajPostac(Node** head, Postac nowaPostac){
     }
 }
 
+void usunPostac(Node** head, const char* pseudonim){
+    if(!*head){
+        printf("Lista jest pusta, brak postaci do usuniecia \n");
+        return;
+    }
+    Node* temp = *head;
+    Node* prev = NULL;
+    while(temp != NULL){
+        if(strcmp(temp->dane.pseudonim, pseudonim) == 0){
+            if(strcmp(temp->dane.status,"uwieziony") == 0){
+                printf("Nie mozna usunac uwiezionej postaci\n");
+                return;
+            }
+            if(prev==NULL){
+                *head = temp->next;
+            }else{
+                prev->next = temp->next;
+            }
+
+            free(temp);
+            printf("Postac '%s' zostala usunieta\n",pseudonim);
+            return;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+    printf("Brak postaci o nazwie '%s' \n",pseudonim);
+}
+
 void wyswietl(Node* head){
     if(!head){
         printf("Lista jest pusta\n");
