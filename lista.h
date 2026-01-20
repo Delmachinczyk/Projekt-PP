@@ -12,18 +12,18 @@ Node* utworzListe();
 
 void dodajPostac(Node** head, Postac nowaPostac);
 
-void usunPostac(Node** head, const char* pseudonim);
+// void usunPostac(Node** head, const char* pseudonim);
 
-void wyswietl(Node *head);
+void wyswietl(Node* head);
 
-void wyszukajPoPseudonimie(Node* head, const char* pseudonim);
+// void wyszukajPoPseudonimie(Node* head, const char* pseudonim);
 
-void wyszukajPoZagrozeniu(Node* head, int zagrozenie);
+// void wyszukajPoZagrozeniu(Node* head, int zagrozenie);
 
-Node* sortujAlfabetycznie(Node* head);
+// Node* sortujAlfabetycznie(Node* head);
 
-Node* sortujPoZagrozeniu(Node* head);
+// Node* sortujPoZagrozeniu(Node* head);
 
-void zwolnijPamiec(Node* head);
+void zwolnijPamiec(Node** head);
 
 #endif
