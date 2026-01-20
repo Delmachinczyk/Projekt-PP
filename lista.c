@@ -73,6 +73,35 @@ void wyswietl(Node* head){
     }
 }
 
+void wyszukajPoPseudonimie(Node* head, const char* pseudonim){
+    if(!head){
+        printf("Lista jest pusta, brak postaci do wyszukania\n");
+        return;
+    }
+
+    Node* temp = head;
+    int znalezione = 0;
+
+    while(temp!=NULL){
+        if(strcmp(temp->dane.pseudonim, pseudonim)==0){
+            printf("Pseudonim: %s | Rola: %s | Moc: %s | Poziom zagrozenia: %d | Dzielnica: %s | Status: %s\n",
+            temp->dane.pseudonim,
+            temp->dane.rola,
+            temp->dane.moc,
+            temp->dane.zagrozenie,
+            temp->dane.dzielnica,
+            temp->dane.status);
+            znalezione++;
+        }
+        temp = temp->next;
+    }
+    if(!znalezione){
+        printf("Nie znaleziono postaci o pseudonimie '%s'\n",pseudonim);
+    }else{
+        printf("Liczba znalezionych postaci: ",znalezione);
+    }
+}
+
 void zwolnijPamiec(Node** head){
     Node* temp;
     while(*head != NULL){

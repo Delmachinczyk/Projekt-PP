@@ -16,7 +16,7 @@ void usunPostac(Node** head, const char* pseudonim);
 
 void wyswietl(Node* head);
 
-// void wyszukajPoPseudonimie(Node* head, const char* pseudonim);
+void wyszukajPoPseudonimie(Node* head, const char* pseudonim);
 
 // void wyszukajPoZagrozeniu(Node* head, int zagrozenie);
 

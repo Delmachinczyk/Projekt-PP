@@ -9,7 +9,8 @@ int main() {
        printf("\n=====Baza Bohaterow=====\n");
        printf("1- Dodawanie postaci\n");
        printf("2- Wyswietlanie obecnych postaci\n");
-       printf("3- Usuwanie psotaci");
+       printf("3- Usuwanie postaci\n");
+       printf("4- Wyszukaj po pseudonimie\n");
        printf("0- Zakonczenie programu\n");
        printf("Wybierz opcje: ");
        scanf("%d",&opcja);
