@@ -11,6 +11,7 @@ int main() {
        printf("2- Wyswietlanie obecnych postaci\n");
        printf("3- Usuwanie postaci\n");
        printf("4- Wyszukaj po pseudonimie\n");
+       printf("5- Wyszukaj po zagrozeniu(>= od wpisanego)\n");
        printf("0- Zakonczenie programu\n");
        printf("Wybierz opcje: ");
        scanf("%d",&opcja);

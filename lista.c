@@ -102,6 +102,34 @@ void wyszukajPoPseudonimie(Node* head, const char* pseudonim){
     }
 }
 
+void wyszukajPoZagrozeniu(Node* head, int zagrozenie){
+    if(!head){
+        printf("Lista jest pusta\n");
+        return;
+    }
+    Node* temp = head;
+    int znalezione = 0;
+
+    while(temp != NULL){
+        if(temp->dane.zagrozenie >= zagrozenie){
+            printf("Pseudonim: %s | Rola: %s | Moc: %s | Poziom zagrozenia: %d | Dzielnica: %s | Status: %s\n",
+            temp->dane.pseudonim,
+            temp->dane.rola,
+            temp->dane.moc,
+            temp->dane.zagrozenie,
+            temp->dane.dzielnica,
+            temp->dane.status);
+            znalezione++;
+        }
+        temp = temp->next;
+    }
+    if(!znalezione){
+        printf("Nie znaleziono postaci o zagrozeniu >= %d\n",zagrozenie);
+    }else{
+        printf("Znaleziono %d postaci o zagrozeniu >= %d\n",znalezione,zagrozenie);
+    }
+}
+
 void zwolnijPamiec(Node** head){
     Node* temp;
     while(*head != NULL){

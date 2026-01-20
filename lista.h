@@ -18,7 +18,7 @@ void wyswietl(Node* head);
 
 void wyszukajPoPseudonimie(Node* head, const char* pseudonim);
 
-// void wyszukajPoZagrozeniu(Node* head, int zagrozenie);
+void wyszukajPoZagrozeniu(Node* head, int zagrozenie);
 
 // Node* sortujAlfabetycznie(Node* head);
 
