@@ -98,7 +98,7 @@ void wyszukajPoPseudonimie(Node* head, const char* pseudonim){
     if(!znalezione){
         printf("Nie znaleziono postaci o pseudonimie '%s'\n",pseudonim);
     }else{
-        printf("Liczba znalezionych postaci: ",znalezione);
+        printf("Liczba znalezionych postaci: %d\n",znalezione);
     }
 }
 
